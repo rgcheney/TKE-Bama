@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tau Kappa Epsilon Capital Campaign</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .progress-container {
+      margin: 2rem 0;
+    }
+
+    .progress-bar-wrapper {
+      position: relative;
+      height: 25px;
+      background-color: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: #cc0000;
+      text-align: center;
+      color: white;
+      line-height: 25px;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .tick {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #999;
+      opacity: 0.7;
+    }
+
+    .tick-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .house-image {
+      width: 100%;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    .donate-btn {
+      display: inline-block;
+      background-color: #cc0000;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      margin: 2rem 0;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header, .container {
+        padding: 1rem;
+      }
+
+      .donate-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .tick-labels {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="C:\Users\rgche\OneDrive\Desktop\TKE Stuff\Fundraising Site\50th Logo.png" alt="TKE Logo" />
+    <h1>Tau Kappa Epsilon Capital Campaign</h1>
+    <p>Help us build the future of the Omicron Xi Chapter</p>
+  </header>
+
+  <div class="container">
+
+    <section class="progress-container">
+      <h2>Fundraising Progress</h2>
+      <div class="progress-bar-wrapper">
+        <div class="progress-fill" id="progressFill">0%</div>
+        <!-- Tick Marks at 25%, 50%, 75%, 100% -->
+        <div class="tick" style="left: 25%;"></div>
+        <div class="tick" style="left: 50%;"></div>
+        <div class="tick" style="left: 75%;"></div>
+        <div class="tick" style="left: 100%;"></div>
+      </div>
+      <div class="tick-labels">
+        <span>$0</span>
+		<span>$250,000</span>
+		<span>$500,000</span>
+		<span>$750,000</span>
+        <span>$1,000,000</span>
+      </div>
+    </section>
+
+    <img src="C:\Users\rgche\OneDrive\Desktop\TKE Stuff\Fundraising Site\TKE House.PNG" alt="Fraternity House" class="house-image" />
+
+    <section>
+      <h2>Support the Campaign</h2>
+      <p>Your donation helps us create a lasting home for generations of TKE members to come. All contributions are deeply appreciated.<br>Donations made through the link below are tax-deductible through the TKE Foundation.</p>
+	  <a href="https://my.tke.org/Donations/Donations.aspx" class="donate-btn" target="_blank">Donate Now</a>
+      <p>Donation Type: Special Projects (Housing)<br>Investing In: Omicron-Xi Housing Fund</p><br>
+      <p>Prefer to mail a check? Please send it to:</p>
+      <p><strong>Omicron Xi Housing Corporation<br>
+      1131 Jackson Avenue, Unit 4310<br>
+      Tuscaloosa, AL 35401</strong></p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Tau Kappa Epsilon – Omicron Xi Chapter. All rights reserved.
+  </footer>
+
+  <script>
+    const current = 600000; // Example amount raised
+    const goal = 1000000;
+    const progress = Math.min((current / goal) * 100, 100);
+    const fill = document.getElementById("progressFill");
+    fill.style.width = progress + "%";
+    fill.innerText = Math.floor(progress) + "%";
+  </script>
+
+</body>
+</html>
